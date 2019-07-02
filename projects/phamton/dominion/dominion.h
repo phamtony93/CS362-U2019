@@ -131,7 +131,7 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state);
 int baronEffect(int choice1, int currentPlayer, struct gameState *state);
 /* Activates Baron card's effects. Returns 0 on success */
 
-int mineEffect(int choice1, int choice2, int currentPlayer, struct gameState *state);
+int mineEffect(int choice1, int choice2, int currentPlayer, struct gameState *state, int handPos);
 /* Activates Mine card's effects. Returns 0 on success, -1 on failure. */
 
 int minionEffect(int choice1, int choice2, int currentPlayer, struct gameState *state, int handPos);
