@@ -24,9 +24,6 @@ testAll: dominion.o testSuite.c
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 
-cardEffects: cardEffects.h cardEffects.c
-	gcc -c cardEffects.c -g $(CFLAGS)
-
 runtests: testDrawCard 
 	./testDrawCard &> unittestresult.out
 	gcov dominion.c >> unittestresult.out
