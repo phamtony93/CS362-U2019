@@ -1289,6 +1289,7 @@ int ambassadorEffect(int choice1, int choice2, int currentPlayer, struct gameSta
 
 int tributeEffect(int currentPlayer, int nextPlayer, struct gameState *state) {
 
+  int tributeRevealedCards[2] = {-1, -1};
   int i;
 
 
@@ -1348,7 +1349,7 @@ int tributeEffect(int currentPlayer, int nextPlayer, struct gameState *state) {
   }
       }    
 		       
-      if (tributeRevealedCards[0] == tributeRevealedCards[1]){//If we have a duplicate card, just drop one 
+      if (tributeRevealedCards[0] = tributeRevealedCards[1]){//If we have a duplicate card, just drop one 
 	state->playedCards[state->playedCardCount] = tributeRevealedCards[1];
 	state->playedCardCount++;
 	tributeRevealedCards[1] = -1;
