@@ -525,6 +525,7 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state) {
 int drawCard(int player, struct gameState *state)
 {	int count;
   int deckCounter;
+  int deckCount = state->deckCount[0];
   if (state->deckCount[player] <= 0){//Deck is empty
     
     //Step 1 Shuffle the discard pile back into a deck
@@ -1180,7 +1181,7 @@ int mineEffect(int choice1, int choice2, int currentPlayer, struct gameState *st
 int minionEffect(int choice1, int choice2, int currentPlayer, struct gameState *state, int handPos) {
   int i;
   int j;
-			
+
       //discard card from hand
       discardCard(handPos, currentPlayer, state, 0);
 			
@@ -1230,7 +1231,7 @@ int ambassadorEffect(int choice1, int choice2, int currentPlayer, struct gameSta
   int j;
 
         j = 0;		//used to check if player has enough cards to discard
-
+	
       if (choice2 > 2 && choice2 < 0) 
 	{
 	  return -1;				
