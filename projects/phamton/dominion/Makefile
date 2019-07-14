@@ -18,8 +18,36 @@ badTestDrawCard: badTestDrawCard.c dominion.o rngs.o
 testBuyCard: testDrawCard.c dominion.o rngs.o
 	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
 
-unitTest1:
-	gcc -o unitTest1 -g unitTest1.c dominion.c rngs.c -coverage -lm
+unitTest1: unitTest1.c dominion.o rngs.o
+	gcc -o unitTest1 -g unitTest1.c dominion.c rngs.c $(CFLAGS)
+
+unitTest2: unitTest2.c dominion.o rngs.o
+	gcc -o unitTest2 -g unitTest2.c dominion.c rngs.c $(CFLAGS)
+
+unitTest3: unitTest3.c dominion.o rngs.o
+	gcc -o unitTest3 -g unitTest3.c dominion.c rngs.c $(CFLAGS)
+
+unitTest4: unitTest4.c dominion.o rngs.o
+	gcc -o unitTest4 -g unitTest4.c dominion.c rngs.c $(CFLAGS)
+
+unitTest5: unitTest5.c dominion.o rngs.o
+	gcc -o unitTest5 -g unitTest5.c dominion.c rngs.c $(CFLAGS)
+
+unittestresults:
+	unitTest1 >> unittestresults.out
+	gcov dominion.c -b -f >> unittestresults.out
+
+	unitTest2 >> unittestresults.out
+	gcov dominion.c -b -f >> unittestresults.out
+
+	unitTest3 >> unittestresults.out
+	gcov dominion.c -b -f >> unittestresults.out
+
+	unitTest4 >> unittestresults.out
+	gcov dominion.c -b -f >> unittestresults.out
+
+	unitTest5 >> unittestresults.out
+	gcov dominion.c -b -f >> unittestresults.out
 
 testAll: dominion.o testSuite.c
 	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
