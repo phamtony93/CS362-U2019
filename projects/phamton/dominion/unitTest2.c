@@ -31,6 +31,7 @@ int main() {
 	int oldActionCount = G.numActions;
 	j = minionEffect(1, 0, 0, &G, 4);
 
+	printf("Test 1.1: Test that 0 is returned. \n");
 	if (j == 0) {
 		printf("Test 1.1 passed \n");
 	}
@@ -38,6 +39,7 @@ int main() {
 		printf("Test 1.1 failed \n");
 	};
 
+	printf("Test 1.2: Test that numAction is incremented. \n");
 	if (G.numActions == oldActionCount + 1) {
 		printf("Test 1.2 passed \n");
 	}
@@ -46,6 +48,7 @@ int main() {
 	};
 
 	//Test 2. Coins is +2 after option 1 selected
+	printf("Test 2.1: Test that numCoins +2 after option 1 is selected. \n");
 	if (G.coins == oldCoinCount + 2) {
 		printf("Test 2.1 passed \n");
 	}
@@ -58,6 +61,8 @@ int main() {
 	int oldDiscardCount = G.discardCount;
 	int oldHandCount = G.handCount;
 	j = minionEffect(0, 1, 0, &G, 4);
+
+	printf("Test 3.1: Test that discardCount is increased by number of cards in hand. \n");
 	if (G.discardCount == oldDiscardCount + oldHandCount) {
 		printf("Test 3.1 passed \n");
 	}
@@ -65,6 +70,7 @@ int main() {
 		printf("Test 3.1 failed \n");
 	};
 
+	printf("Test 3.2: Test that 4 new cards were drawn and hand count is 4. \n");
 	if (G.handCount == 4) {
 		printf("Test 3.2 passed \n");
 	}
@@ -72,5 +78,5 @@ int main() {
 		printf("Test 3.2 failed \n");
 	};
 
-	system("pause");
+	//system("pause");
 }
