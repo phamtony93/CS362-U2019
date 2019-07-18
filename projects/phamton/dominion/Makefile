@@ -33,7 +33,28 @@ unitTest4: unitTest4.c dominion.o rngs.o
 unitTest5: unitTest5.c dominion.o rngs.o
 	gcc -o unitTest5 -g unitTest5.c dominion.c rngs.c $(CFLAGS)
 
+cardTest1: cardTest1.c dominion.o rngs.o
+	gcc -o cardTest1 -g cardTest1.c dominion.c rngs.c $(CFLAGS)
+
+cardTest2: cardTest2.c dominion.o rngs.o
+	gcc -o cardTest2 -g cardTest2.c dominion.c rngs.c $(CFLAGS)
+
+cardTest3: cardTest3.c dominion.o rngs.o
+	gcc -o cardTest3 -g cardTest3.c dominion.c rngs.c $(CFLAGS)
+
+cardTest4: cardTest4.c dominion.o rngs.o
+	gcc -o cardTest4 -g cardTest4.c dominion.c rngs.c $(CFLAGS)
+
+cardTest5: cardTest5.c dominion.o rngs.o
+	gcc -o cardTest5 -g cardTest5.c dominion.c rngs.c $(CFLAGS)
+
 unittestresults:
+	unitTest4 >> unittestresults.out
+	gcov dominion.c -b -f >> unittestresults.out
+
+	unitTest5 >> unittestresults.out
+	gcov dominion.c -b -f >> unittestresults.out
+
 	unitTest1 >> unittestresults.out
 	gcov dominion.c -b -f >> unittestresults.out
 
@@ -43,11 +64,7 @@ unittestresults:
 	unitTest3 >> unittestresults.out
 	gcov dominion.c -b -f >> unittestresults.out
 
-	unitTest4 >> unittestresults.out
-	gcov dominion.c -b -f >> unittestresults.out
 
-	unitTest5 >> unittestresults.out
-	gcov dominion.c -b -f >> unittestresults.out
 
 testAll: dominion.o testSuite.c
 	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
