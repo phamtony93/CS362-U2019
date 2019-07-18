@@ -110,5 +110,5 @@ int main() {
 		printf("Failed Test 3\n");
 	};
 
-	system("pause");
+	//system("pause");
 }
