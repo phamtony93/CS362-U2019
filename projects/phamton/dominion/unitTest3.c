@@ -113,43 +113,7 @@ int main() {
 		printf("Failed Test 2 \n");
 	};
 
-
-
-
-
-
-
-
-
-
-	////Test 2
-	//printf("Test 2: Call Ambassador effect sacrificing 3 silver card, while having 3 copies in hand \n");
-	////Set all players to have copper in discard
-	//for (i = 0; i < MAX_PLAYERS; i++) {
-	//	for (j = 0; j < MAX_DECK; j++) {
-	//		G.discard[i][j] = copper;
-	//	};
-	//};
-
-	////Set player 0 to have 3 silver and 1 ambassador
-	//silverCountOld = 3;
-	//silverCountNew = 0;
-	//for (i = 0; i < 3; i++) {
-	//	G.hand[0][i] = silver;
-	//};
-	//G.hand[0][4] = ambassador;
-
-	////Sacrifice 3 silver but have 3 in hand
-	//j = ambassadorEffect(0, 3, 0, &G, 4);
-
-	//printf("Test 2: Check that function returns -1 \n");
-	//if (j == -1) {
-	//	printf("Passed Test 2 \n");
-	//}
-	//else {
-	//	printf("Failed Test 2 \n");
-	//};
-
+	
 
 
 	//system("pause");
