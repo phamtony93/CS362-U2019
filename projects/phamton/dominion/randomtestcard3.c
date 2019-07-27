@@ -24,8 +24,8 @@ int main() {
 		for (j = 0; j < sizeof(struct gameState); j++) {
 			((char*)&G)[i] = (rand() % (256 - 0 + 1));
 		};
-		player = (rand() % (numPlayer - 0 + 1));
-		nextPlayer = (rand() % (2 - 0 + 1));
+		player = (rand() % (numPlayer));
+		nextPlayer = (rand() % (numPlayer));
 		while (nextPlayer == player) {
 			nextPlayer = (rand() % (2 - 0 + 1));
 		};
