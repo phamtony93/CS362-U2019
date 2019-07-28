@@ -8,16 +8,26 @@ char inputChar()
     // TODO: rewrite this function
 	char randomChar;
 
-	int range = 126 - 33;
-	randomChar = (rand() % range) + 33;
+	int range = 122 - 65 + 1;
+	randomChar = (rand() % range) + 65;
     return randomChar;
 }
 
 char *inputString()
 {
     // TODO: rewrite this function
-	char* greeting = new char[6];
-	strcpy(greeting, "hello");
+	int i;
+
+	char greeting[10];
+
+	for (int i = 0; i < 9; i++) {
+		greeting[i] = inputChar();
+		printf("%c \n", greeting[i]);
+	};
+	greeting[9] = 0;
+
+	printf("%s \n", greeting);
+	//strcpy(greeting, "hello");
     return greeting;
 }
 
@@ -60,9 +70,10 @@ int main(int argc, char *argv[])
     srand(time(NULL));
     //testme();
 
-	char *random;
-	random = inputChar();
-	printf("%s \n", random);
+	char* s;
+	s = inputString();
+	//strcpy(random, inputString());
+	printf("%s \n", s);
 
 	system("pause");
     return 0;
