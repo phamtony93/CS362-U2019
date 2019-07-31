@@ -17,10 +17,10 @@ char inputChar()
 char *inputString()
 {
     // TODO: rewrite this function
-	int i;
+	//int i;
 
 	char randomString[6];
-	int randomConsanance = (rand() % (117 - 113 + 1)) + 113;
+	//int randomConsanance = (rand() % (117 - 113 + 1)) + 113;
 
 	char vowels[5];
 	vowels[0] = 'a';
