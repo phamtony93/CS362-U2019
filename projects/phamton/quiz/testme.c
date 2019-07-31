@@ -93,6 +93,6 @@ int main(int argc, char *argv[])
 	//strcpy(random, inputString());
 	//printf("%s \n", s);
 
-	system("pause");
+	//system("pause");
     return 0;
 }
