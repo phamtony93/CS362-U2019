@@ -8,8 +8,9 @@ char inputChar()
     // TODO: rewrite this function
 	char randomChar;
 
-	int range = 122 - 65 + 1;
-	randomChar = (rand() % range) + 65;
+	int range = 125 - 32 + 1;
+
+	randomChar = (rand() % range) + 32;
     return randomChar;
 }
 
@@ -18,17 +19,33 @@ char *inputString()
     // TODO: rewrite this function
 	int i;
 
-	char greeting[10];
+	char randomString[6];
+	int randomConsanance = (rand() % (117 - 113 + 1)) + 113;
 
-	for (int i = 0; i < 9; i++) {
-		greeting[i] = inputChar();
-		printf("%c \n", greeting[i]);
-	};
-	greeting[9] = 0;
+	char vowels[5];
+	vowels[0] = 'a';
+	vowels[1] = 'e';
+	vowels[2] = 'i';
+	vowels[3] = 'o';
+	vowels[4] = 'u';
 
-	printf("%s \n", greeting);
+	int randomVowel = rand() % 5;
+
+	//for (int i = 0; i < 5; i++) {
+	//	greeting[i] = (rand() % randomRandge) + 101;
+	//	//printf("%c \n", greeting[i]);
+	//};
+
+	randomString[0] = ((rand() % (122 - 97 + 1)) + 97);
+	randomString[1] = vowels[randomVowel];
+	randomString[2] = ((rand() % (122 - 97 + 1)) + 97);
+	randomString[3] = vowels[randomVowel];
+	randomString[4] = ((rand() % (122 - 97 + 1)) + 97);
+	randomString[5] = 0;
+
+	//printf("%s \n", greeting);
 	//strcpy(greeting, "hello");
-    return greeting;
+    return randomString;
 }
 
 void testme()
@@ -42,8 +59,8 @@ void testme()
     tcCount++;
     c = inputChar();
     s = inputString();
-    printf("Iteration %d: c = %c, s = %s, state = %d\n", tcCount, c, s, state);
-
+    //printf("c = %c, state = %d\n", c, state);
+	
     if (c == '[' && state == 0) state = 1;
     if (c == '(' && state == 1) state = 2;
     if (c == '{' && state == 2) state = 3;
@@ -55,7 +72,8 @@ void testme()
     if (c == ']' && state == 8) state = 9;
     if (s[0] == 'r' && s[1] == 'e'
        && s[2] == 's' && s[3] == 'e'
-       && s[4] == 't' && s[5] == '\0'
+       && s[4] == 't' 
+		&& s[5] == '\0'
        && state == 9)
     {
       printf("error ");
@@ -68,12 +86,12 @@ void testme()
 int main(int argc, char *argv[])
 {
     srand(time(NULL));
-    //testme();
+    testme();
 
-	char* s;
-	s = inputString();
+	//char* s;
+	//s = inputString();
 	//strcpy(random, inputString());
-	printf("%s \n", s);
+	//printf("%s \n", s);
 
 	system("pause");
     return 0;
