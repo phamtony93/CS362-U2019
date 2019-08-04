@@ -37,7 +37,7 @@ int main() {
 	};
 
 	//Choice1 = true
-	j = baronEffect(1, 0, &G);
+	j = baronEffect(1, &G, 0);
 	
 	//Count number of estate in discard pile after baron effect
 	//Test 1
@@ -86,7 +86,7 @@ int main() {
 	};
 
 	//Choice1 = true
-	j = baronEffect(1, 0, &G);
+	j = baronEffect(1, &G, 0);
 
 	//Count number of estate in discard pile after baron effect
 	numEstateNew = 0;
@@ -115,7 +115,7 @@ int main() {
 	};
 
 	//Choice1 = false
-	j = baronEffect(0, 0, &G);
+	j = baronEffect(0, &G, 0);
 
 	//Count number of estate in discard pile after baron effect
 	numEstateNew = 0;
@@ -134,5 +134,5 @@ int main() {
 	};
 
 
-	//system("pause");
+	system("pause");
 }

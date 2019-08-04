@@ -29,7 +29,7 @@ int main() {
 		G.deckCount[player] = (rand() % (MAX_DECK - 0 + 1));
 		G.discardCount[player] = (rand() % (MAX_DECK - 0 + 1));
 		G.handCount[player] = (rand() % (MAX_HAND - 0 + 1));
-		baronEffect(choice1, player, &G);
+		baronEffect(choice1, &G, player);
 	};
 
 	printf("Passed all tests \n");

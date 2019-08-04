@@ -28,8 +28,9 @@ int main() {
 	G.hand[1][1] = baron;
 
 	int numActionsOld = G.numActions;
+	int tributeRevealedCards[2] = { -1, -1 };
 
-	j = tributeEffect(0, 1, &G);
+	j = tributeEffect(&G, 0, 1, tributeRevealedCards);
 
 	if (G.numActions == numActionsOld + 2) {
 		printf("Passed Test 1.1 \n");
@@ -46,7 +47,7 @@ int main() {
 	numActionsOld = G.numActions;
 	int numCoinsOld = G.coins;
 
-	j = tributeEffect(0, 1, &G);
+	j = tributeEffect(&G, 0, 1, tributeRevealedCards);
 
 	if (G.numActions == numActionsOld + 2 && G.coins == numCoinsOld + 2) {
 		printf("Passed Test 2 \n");
@@ -57,5 +58,5 @@ int main() {
 
 
 
-	//system("pause");
+	system("pause");
 }

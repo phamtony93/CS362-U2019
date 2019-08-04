@@ -29,7 +29,7 @@ int main() {
 	//Test 1. Choice 1 selected. Action should be incremented and coins +2
 	int oldCoinCount = G.coins;
 	int oldActionCount = G.numActions;
-	j = minionEffect(1, 0, 0, &G, 4);
+	j = minionEffect(1, &G, 0, 4);
 
 	printf("Test 1.1: Test that 0 is returned. \n");
 	if (j == 0) {
@@ -60,7 +60,7 @@ int main() {
 	G.hand[0][4] = minion;
 	int oldDiscardCount = G.discardCount;
 	int oldHandCount = G.handCount;
-	j = minionEffect(0, 1, 0, &G, 4);
+ 	j = minionEffect(1, &G, 4, 0);
 
 	printf("Test 3.1: Test that discardCount is increased by number of cards in hand. \n");
 	if (G.discardCount == oldDiscardCount + oldHandCount) {
@@ -78,5 +78,5 @@ int main() {
 		printf("Test 3.2 failed \n");
 	};
 
-	//system("pause");
+	system("pause");
 }

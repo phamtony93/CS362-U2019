@@ -72,5 +72,5 @@ int main() {
 		printf("Failed Test 2 \n");
 	};
 
-	//system("pause");
+	system("pause");
 }

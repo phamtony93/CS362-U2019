@@ -36,7 +36,7 @@ int main() {
 	//Loop through players 0-2. Select Copper, Silver, Gold
 	printf("Test 1: Loop 3 players sacrificing copper to gain copper, silver, and gold in that order. \n Gold should return error. \n");
 	for (i = 0; i < 3; i++) {
-		j = mineEffect(0, (copper + i), i, &G, 5);
+		j = mineEffect(0, (copper + i), &G, 5, i);
 
 		switch (copper + i)
 		{
@@ -83,7 +83,7 @@ int main() {
 	//Choice1 not a copper, silver or gold 
 	printf("Test 2: choice1 to sacrifice is not a copper, silver or gold. -1 should be returned. \n");
 	G.hand[0][0] = estate;
-	j = mineEffect(0, copper, 0, &G, 4);
+	j = mineEffect(0, copper, &G, 4, 0);
 	if (j == -1) {
 		printf("Passed Test 2\n");
 	} 
@@ -102,7 +102,7 @@ int main() {
 
 	//Choice2 not a copper, silver or gold 
 	printf("Test 3: Choice2 to gain is not copper, silver or gold. -1 should be returned. \n");
-	j = mineEffect(0, estate, 0, &G, 4);
+	j = mineEffect(0, estate, &G, 4, 0);
 	if (j == -1) {
 		printf("Passed Test 3\n");
 	}
@@ -110,5 +110,5 @@ int main() {
 		printf("Failed Test 3\n");
 	};
 
-	//system("pause");
+	system("pause");
 }

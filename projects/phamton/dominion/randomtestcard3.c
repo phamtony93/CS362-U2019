@@ -19,6 +19,7 @@ int main() {
 
 	int player;
 	int nextPlayer;
+	int tributeRevealedCards[2] = { -1, -1 };
 
 	for (i = 0; i < 1000; i++) {
 		for (j = 0; j < sizeof(struct gameState); j++) {
@@ -45,7 +46,7 @@ int main() {
 			G.discard[nextPlayer][h] = (rand() % (27 - 0 + 1));
 		};
 
-		tributeEffect(player, nextPlayer, &G);
+		tributeEffect(&G, player, nextPlayer, tributeRevealedCards);
 	};
 
 	printf("Passed all tests \n");

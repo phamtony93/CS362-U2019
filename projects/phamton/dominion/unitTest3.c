@@ -40,7 +40,7 @@ int main() {
 	G.hand[0][4] = ambassador;
 
 	//Sacrifice 1 silver but have 3 in hand
-	j = ambassadorEffect(0, 1, 0, &G, 4);
+	j = ambassadorEffect(0, 1, &G, 4, 0);
 
 	printf("Test 1.1: Check that function returns 0 \n");
 	if (j == 0) {
@@ -103,7 +103,7 @@ int main() {
 	G.hand[0][3] = silver;
 
 	//Sacrifice 2 silver but have 1 in hand
-	j = ambassadorEffect(0, 2, 0, &G, 4);
+	j = ambassadorEffect(0, 2, &G, 4, 0);
 
 	printf("Test 2: Only 1 player with silver in discard \n");
 	if (j == -1) {
@@ -116,5 +116,5 @@ int main() {
 	
 
 
-	//system("pause");
+	system("pause");
 }

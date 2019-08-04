@@ -128,18 +128,18 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state);
 /* Set array position of each player who won (remember ties!) to
    1, others to 0 */
 
-int baronEffect(int choice1, int currentPlayer, struct gameState *state);
-/* Activates Baron card's effects. Returns 0 on success */
-
-int mineEffect(int choice1, int choice2, int currentPlayer, struct gameState *state, int handPos);
-/* Activates Mine card's effects. Returns 0 on success, -1 on failure. */
-
-int minionEffect(int choice1, int choice2, int currentPlayer, struct gameState *state, int handPos);
-/* Activates Minion card's effects. Returns 0 on success, -1 on failure. */
-
-int ambassadorEffect(int choice1, int choice2, int currentPlayer, struct gameState *state, int handPos);
-/* Activates Ambassador card's effects. Returns 0 on success, -1 on failure */
-
-int tributeEffect(int currentPlayer, int nextPlayer, struct gameState *state);
-/* Activates Tribute card's effects. Returns 0 on success. */
+//int baronEffect(int choice1, int currentPlayer, struct gameState *state);
+///* Activates Baron card's effects. Returns 0 on success */
+//
+//int mineEffect(int choice1, int choice2, int currentPlayer, struct gameState *state, int handPos);
+///* Activates Mine card's effects. Returns 0 on success, -1 on failure. */
+//
+//int minionEffect(int choice1, int choice2, int currentPlayer, struct gameState *state, int handPos);
+///* Activates Minion card's effects. Returns 0 on success, -1 on failure. */
+//
+//int ambassadorEffect(int choice1, int choice2, int currentPlayer, struct gameState *state, int handPos);
+///* Activates Ambassador card's effects. Returns 0 on success, -1 on failure */
+//
+//int tributeEffect(int currentPlayer, int nextPlayer, struct gameState *state);
+///* Activates Tribute card's effects. Returns 0 on success. */
 #endif

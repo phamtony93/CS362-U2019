@@ -46,7 +46,7 @@ int main() {
 			G.discardCount[h] = (rand() % (MAX_DECK - 0 + 1));
 		};
 		handPos = (rand() % (G.handCount[player] - 0 + 1));
-		minionEffect(choice1, choice2, player, &G, handPos);
+		minionEffect(choice1, &G, handPos, player);
 	};
 
 	printf("Passed all tests \n");
